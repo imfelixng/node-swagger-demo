@@ -11,15 +11,15 @@ const {
 
 const route = express.Router();
 
-router.route('/users')
+route.route('/users')
   .post(createUser)
   .get(getAllUsers);
 
-router.route('/users/:userId')
+route.route('/users/:userId')
   .get(getOneUser)
   .put(updateUser)
   .delete(deleteUser);
 
-router.param('userId', getByIdUser);
+route.param('userId', getByIdUser);
 
 module.exports = route;

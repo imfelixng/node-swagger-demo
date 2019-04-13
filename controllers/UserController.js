@@ -1,3 +1,5 @@
+const User = require('../models/User');
+
 const createUser = function (req, res, next) {
   const user = new User(req.body);
   user.save(function (err) {
